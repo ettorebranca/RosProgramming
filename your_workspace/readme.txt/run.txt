@@ -1,0 +1,17 @@
+insert the image into the folder "put image here" (or use the one already in)
+
+-source ros and package my_pkg
+
+source /opt/ros/noetic/setup.bash
+source ~/simple_planner_robot_programming/devel/setup.bash
+
+-then run this following nodes:
+
+rosrun my_pkg goal_node
+rosrun my_pkg base_link_node
+rosrun my_pkg grid_map_node
+rosrun my_pkg planner_node
+
+-the order doesn't matter
+-goal and baselink will ask the cordinates of the point of both respectively 
+-you will see the path calculated by the program after running planner node
