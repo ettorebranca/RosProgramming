@@ -22,8 +22,8 @@ class RV_Map {
   visualization_msgs::Marker robot_marker;
   ros::Publisher rviz_pub;
   ros::Subscriber initial_pos_sub;
-  float initial_pos_x;
-  float initial_pos_y;
+  float x_in;
+  float y_in;
   bool initial_pos_recieved;
 
   RV_Map(ros::NodeHandle node_handle);
@@ -37,7 +37,6 @@ class RV_Path {
  public:
   ros::Publisher path_pub;
   nav_msgs::Path path;
-
   RV_Path(ros::NodeHandle node_handle);
   void update_path(RV_Pos coord);
 };
