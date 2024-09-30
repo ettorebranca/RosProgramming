@@ -17,6 +17,7 @@ class RV_Pos {
   int h;
   RV_Pos(int x, int y, int w, int h);
 };
+
 class RV_Map {
  public:
   visualization_msgs::Marker robot_marker;
@@ -24,11 +25,11 @@ class RV_Map {
   ros::Subscriber initial_pos_sub;
   float x_in;
   float y_in;
-  bool initial_pos_recieved;
+  bool initial_position_recieved;
 
   RV_Map(ros::NodeHandle node_handle);
   void update_robot_position(RV_Pos coord);
-  void initial_pos_callback(
+  void initial_position_callback(
       const geometry_msgs::PoseWithCovarianceStamped::ConstPtr& msg);
   void set_goal(RV_Pos coord);
 };
