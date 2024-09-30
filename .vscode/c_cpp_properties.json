@@ -1,21 +1,23 @@
 {
     "configurations": [
-      {
-        "browse": {
-          "databaseFilename": "${default}",
-          "limitSymbolsToIncludedHeaders": false
-        },
-        "includePath": [
-          "/opt/ros/noetic/include/**",
-          "/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner_rp/include/**",
-          "/usr/include/**"
-        ],
-        "name": "ROS",
-        "intelliSenseMode": "linux-gcc-x64",
-        "compilerPath": "/usr/bin/gcc",
-        "cStandard": "gnu11",
-        "cppStandard": "c++14"
-      }
+        {
+            "browse": {
+                "databaseFilename": "${default}",
+                "limitSymbolsToIncludedHeaders": false
+            },
+            "includePath": [
+                "/opt/ros/noetic/include/**",
+                "/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner_rp/include/**",
+                "/usr/include/**",
+                "/opt/ros/noetic/include",
+                "${workspaceFolder}"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "linux-gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu11",
+            "cppStandard": "c++14"
+        }
     ],
     "version": 4
-  }
+}
