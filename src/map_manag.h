@@ -3,7 +3,7 @@
 #include <ros/ros.h>
 #include <stdio.h>
 
-enum Cell { Obst, Valid, Arrive, NotVal };
+enum Cell { Obst, Valid, Goal, NotVal };
 
 class Position {
  public:
