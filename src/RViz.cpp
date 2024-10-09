@@ -31,7 +31,7 @@ RV_Map::RV_Map(ros::NodeHandle node_handle) {
   robot_marker.color.b = 0.0;
   robot_marker.lifetime = ros::Duration();
 
-  initial_pos_sub = node_handle.subscribe("initial_pose", 1, &RvizMap::initial_position_callback, this);
+  initial_pos_sub = node_handle.subscribe("initial_pose", 1, &RV_Map::initial_position_callback, this);
 }
 
 void RV_Map::initial_position_callback(
@@ -45,7 +45,7 @@ void RV_Map::initial_position_callback(
                       : ceil(initial_pose.pose.pose.position.x) - .5;
   y_in = ceil(initial_pose.pose.pose.position.y) - .5;
   std::cout << x_in << ", " << y_in << std::endl;
-  initial_position_recieved = true;
+  initial_position_received = true;
 }
 void RV_Map::update_robot_position(RV_Pos coord) {
   robot_marker.pose.position.x = coord.x;

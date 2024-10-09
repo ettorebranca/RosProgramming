@@ -25,7 +25,7 @@ class RV_Map {
   ros::Subscriber initial_pos_sub;
   float x_in;
   float y_in;
-  bool initial_position_recieved;
+  bool initial_position_received;
 
   RV_Map(ros::NodeHandle node_handle);
   void update_robot_position(RV_Pos coord);
