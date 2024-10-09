@@ -3,5 +3,5 @@
 
     <node name="rviz" pkg="rviz" type="rviz" args="-d /home/lattinone/catkin_ws/simple_planner_ws/maps/map.rviz" required="true" />
     
-    <node name="main_node" pkg="simple_planner" type="main_node" output="screen" required="true" />
+    <node name="node" pkg="simple_planner_rp" type="node" output="screen" required="true" />
 </launch>

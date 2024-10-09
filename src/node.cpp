@@ -3,7 +3,7 @@
 #include "map_manag.h"
 
 int main(int argc, char** argv) {
-  ros::init(argc, argv, "simple_planner_node");
+  ros::init(argc, argv, "simple_planner_rp_node");
   ros::NodeHandle node_handle;
   ros::Rate r(3);
   Map map(node_handle);

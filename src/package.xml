@@ -3,6 +3,9 @@
   <name>simple_planner_rp</name>
   <version>0.0.0</version>
   <description>The simple_planner package</description>
+  <maintainer email="you@example.com">Your Name</maintainer>
+<license>BSD</license>
+
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->

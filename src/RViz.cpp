@@ -8,7 +8,7 @@ RV_Pos::RV_Pos(int x, int y, int w, int h) {
 }
 
 RV_Map::RV_Map(ros::NodeHandle node_handle) {
-  ROS_INFO("rviz node ready");
+  ROS_INFO("RViz node ready");
   rviz_pub = node_handle.advertise<visualization_msgs::Marker>(
       "visualization_marker", 0);
   robot_marker.header.frame_id = "map";

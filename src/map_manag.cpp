@@ -24,12 +24,12 @@ int Map::get_h() { return occupancy_grid.info.height; }
 Cell Map::get_element_at(Position coords) {
   switch (occupancy_grid.data[coords.idx]) {
     case 0:
-      return MapElement::Valid;
+      return Cell::Valid;
     case -1:
-      return MapElement::Goal;
-    case 999:
-      return MapElement::Obst;
+      return Cell::Goal;
+    case 100:
+      return Cell::Obst;
     default:
-      return MapElement::NotVal;
+      return Cell::NotVal;
   }
 }

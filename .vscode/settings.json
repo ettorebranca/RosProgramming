@@ -1,5 +1,5 @@
 {
-    "cmake.sourceDirectory": "C:/lattinone/Desktop/simple_planner_rp/src",
+    "cmake.sourceDirectory": "C:/home/lattinone/Desktop/simple_planner_rp/src",
     "python.autoComplete.extraPaths": [
         "/opt/ros/noetic/lib/python3/dist-packages"
     ],
