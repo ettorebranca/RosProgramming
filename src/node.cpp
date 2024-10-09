@@ -13,31 +13,31 @@ int main(int argc, char** argv) {
       ros::spinOnce();
       ROS_INFO_ONCE("Waiting to get data");
     }
-    ROS_INFO("Data recieved");
+    ROS_INFO("Data received");
     int w = map.get_w();
     int h = map.get_h();
     if (w % 2 != 0 || h % 2 != 0) {
       ROS_ERROR("Even number of rows and cols required");
       return 1;
     }
-    RV_Map RV_Map(node_handle);
-    RV_Path RV_Path(node_handle);
+    RV_Map rviz_map(node_handle);
+    RV_Path rviz_path(node_handle);
 
-    while (RV_Map.initial_pos_sub.getNumPublishers() < 1 ||
-           !RV_Map.initial_position_recieved) {
+    while (rviz_map.initial_pos_sub.getNumPublishers() < 1 ||
+           !rviz_map.initial_position_received) {
       ros::spinOnce();
       ROS_INFO_ONCE("Waiting to get initial position from RViz");
     }
     int in_x =
-        RV_Map.x_in + w / 2 - (1 - w % 2) * .5;  
+        rviz_map.x_in + w / 2 - (1 - w % 2) * .5;  
     int in_y =
-        h / 2 - RV_Map.y_in - (1 - h % 2) * .5;  
+        h / 2 - rviz_map.y_in - (1 - h % 2) * .5;  
     Position initial_position(in_x, in_y, w, h);
-    while (RV_Map.rviz_pub.getNumSubscribers() < 1 &&
-           RV_Path.path_pub.getNumSubscribers() < 1) {
+    while (rviz_map.rviz_pub.getNumSubscribers() < 1 &&
+           rviz_path.path_pub.getNumSubscribers() < 1) {
       ROS_INFO_ONCE("Waiting for RViz to subscribe");
     }
-    RV_Map.update_robot_position(RV_Pos(in_x, in_y, w, h));
+    rviz_map.update_robot_position(RV_Pos(in_x, in_y, w, h));
     if (map.get_element_at(initial_position) == Cell::Obst) {
       ROS_ERROR("Invalid starting position (obstacle)");
       return 1;
@@ -46,9 +46,9 @@ int main(int argc, char** argv) {
       ROS_ERROR("Invalid starting position");
       return 1;
     }
-    Planner Planner(map);
+    Planner planner(map);
     ROS_INFO("Planning...");
-    path = Planner.plan_path(initial_position);
+    path = planner.plan_path(initial_position);
 
     ROS_INFO("Press to start");
     std::cin.get();
@@ -57,8 +57,8 @@ int main(int argc, char** argv) {
       return 0;
     }
     for (size_t i = 0; i < path.size(); i++) {
-      RV_Map.update_robot_position(path[i]);
-      RV_Path.update_path(path[i]);
+      rviz_map.update_robot_position(path[i]);
+      rviz_path.update_path(path[i]);
       r.sleep();
     }
     ROS_INFO("Press to stop");

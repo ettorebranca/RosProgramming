@@ -2,10 +2,11 @@ authors: []
 blacklist: []
 build_space: build
 catkin_make_args: []
-cmake_args: []
+cmake_args:
+- -Dcatkin_DIR=/opt/ros/noetic/share/catkin/cmake
 devel_layout: linked
 devel_space: devel
-extend_path: null
+extend_path: /opt/ros/noetic
 extends: null
 install: false
 install_space: install
