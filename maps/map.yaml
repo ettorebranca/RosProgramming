@@ -1,4 +1,4 @@
-image: ./map.pgm
+image: /home/lattinone/Desktop/simple_planner_rp/maps/map.pgm
 resolution: 1
 origin: [-4, -4, 0]
 negate: 0

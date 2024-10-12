@@ -1,0 +1,1 @@
+/home/lattinone/Desktop/simple_planner_rp/devel/.private/catkin_tools_prebuild/local_setup.zsh

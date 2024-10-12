@@ -1,0 +1,5 @@
+[31m[1mCMake Error[0m at /home/lattinone/Desktop/simple_planner_rp/src/./CMakeLists.txt:27 (target_link_libraries):
+  Cannot specify link libraries for target "map_manag" which is not built by
+  this project.
+
+

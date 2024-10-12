@@ -1,0 +1,6 @@
+devel_space: /home/lattinone/Desktop/simple_planner_rp/devel
+install: false
+install_space: /home/lattinone/Desktop/simple_planner_rp/install
+profile: default
+source_space: /home/lattinone/Desktop/simple_planner_rp/src
+workspace: /home/lattinone/Desktop/simple_planner_rp

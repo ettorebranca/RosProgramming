@@ -1,0 +1,52 @@
+/usr/bin/ld: CMakeFiles/node.dir/node.cpp.o: in function `main':
+node.cpp:(.text+0x194): undefined reference to `Map::Map(ros::NodeHandle)'
+/usr/bin/ld: node.cpp:(.text+0x43e): undefined reference to `Map::get_w()'
+/usr/bin/ld: node.cpp:(.text+0x453): undefined reference to `Map::get_h()'
+/usr/bin/ld: node.cpp:(.text+0x5ce): undefined reference to `RV_Map::RV_Map(ros::NodeHandle)'
+/usr/bin/ld: node.cpp:(.text+0x60f): undefined reference to `RV_Path::RV_Path(ros::NodeHandle)'
+/usr/bin/ld: node.cpp:(.text+0x876): undefined reference to `Position::Position(int, int, int, int)'
+/usr/bin/ld: node.cpp:(.text+0xa21): undefined reference to `RV_Pos::RV_Pos(int, int, int, int)'
+/usr/bin/ld: node.cpp:(.text+0xa46): undefined reference to `RV_Map::update_robot_position(RV_Pos)'
+/usr/bin/ld: node.cpp:(.text+0xa65): undefined reference to `Map::get_element_at(Position)'
+/usr/bin/ld: node.cpp:(.text+0xd20): undefined reference to `Planner::Planner(Map)'
+/usr/bin/ld: node.cpp:(.text+0xe73): undefined reference to `Planner::plan_path(Position)'
+/usr/bin/ld: node.cpp:(.text+0x1167): undefined reference to `RV_Map::update_robot_position(RV_Pos)'
+/usr/bin/ld: node.cpp:(.text+0x119e): undefined reference to `RV_Path::update_path(RV_Pos)'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/node.dir/build.make:155: /home/lattinone/Desktop/simple_planner_rp/devel/.private/simple_planner_rp/lib/simple_planner_rp/node] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1735: CMakeFiles/node.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+(.text+0x24): undefined reference to `main'
+/usr/bin/ld: CMakeFiles/path_finder.dir/path_finder.cpp.o: in function `Planner::rec_path(Node*)':
+path_finder.cpp:(.text+0xcd): undefined reference to `Map::get_h()'
+/usr/bin/ld: path_finder.cpp:(.text+0xdb): undefined reference to `Map::get_w()'
+/usr/bin/ld: path_finder.cpp:(.text+0xf9): undefined reference to `RV_Pos::RV_Pos(int, int, int, int)'
+/usr/bin/ld: CMakeFiles/path_finder.dir/path_finder.cpp.o: in function `Planner::plan_path(Position)':
+path_finder.cpp:(.text+0x1ee): undefined reference to `Map::get_element_at(Position)'
+/usr/bin/ld: path_finder.cpp:(.text+0x21a): undefined reference to `Map::get_h()'
+/usr/bin/ld: path_finder.cpp:(.text+0x22b): undefined reference to `Map::get_w()'
+/usr/bin/ld: path_finder.cpp:(.text+0x24b): undefined reference to `RV_Pos::RV_Pos(int, int, int, int)'
+/usr/bin/ld: path_finder.cpp:(.text+0x2c4): undefined reference to `Map::get_h()'
+/usr/bin/ld: path_finder.cpp:(.text+0x2f3): undefined reference to `Map::get_w()'
+/usr/bin/ld: path_finder.cpp:(.text+0x4c6): undefined reference to `Map::get_element_at(Position)'
+/usr/bin/ld: path_finder.cpp:(.text+0x5b8): undefined reference to `Map::get_w()'
+/usr/bin/ld: path_finder.cpp:(.text+0x5e0): undefined reference to `Map::get_h()'
+/usr/bin/ld: path_finder.cpp:(.text+0x65c): undefined reference to `Map::get_element_at(Position)'
+/usr/bin/ld: path_finder.cpp:(.text+0x6d4): undefined reference to `Map::get_h()'
+/usr/bin/ld: path_finder.cpp:(.text+0x6e5): undefined reference to `Map::get_w()'
+/usr/bin/ld: path_finder.cpp:(.text+0x705): undefined reference to `Position::Position(int, int, int, int)'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/path_finder.dir/build.make:155: /home/lattinone/Desktop/simple_planner_rp/devel/.private/simple_planner_rp/lib/simple_planner_rp/path_finder] Error 1
+make[1]: *** [CMakeFiles/Makefile2:790: CMakeFiles/path_finder.dir/all] Error 2
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+(.text+0x24): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/map_manag.dir/build.make:155: /home/lattinone/Desktop/simple_planner_rp/devel/.private/simple_planner_rp/lib/simple_planner_rp/map_manag] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1465: CMakeFiles/map_manag.dir/all] Error 2
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+(.text+0x24): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/RViz.dir/build.make:155: /home/lattinone/Desktop/simple_planner_rp/devel/.private/simple_planner_rp/lib/simple_planner_rp/RViz] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1762: CMakeFiles/RViz.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

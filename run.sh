@@ -1,4 +1,3 @@
-ws2
 catkin build
 source devel/setup.bash
-roslaunch ./src/sp.launch
+roslaunch /home/lattinone/Desktop/simple_planner_rp/src/sp.launch

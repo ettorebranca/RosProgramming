@@ -1,0 +1,8 @@
+prefix=/home/lattinone/Desktop/simple_planner_rp/devel/.private/simple_planner_rp
+
+Name: simple_planner_rp
+Description: Description of simple_planner_rp
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
