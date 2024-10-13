@@ -4,6 +4,9 @@
 
 This project implements a simple path planning system using ROS Noetic, designed to work with RViz for visualization and map_server for handling occupancy grids.
 
+<img src="output_sample.png"  width="200"/>
+
+
 ## Features
 
 - **Occupancy Grid Handling**: Subscribes to the `/map` topic to receive the occupancy grid from the map server.
